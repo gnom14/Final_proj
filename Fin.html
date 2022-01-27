@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/Fin.CSS">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/a3c7b57129.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Open+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap" rel="stylesheet">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+            // https://dashboard.emailjs.com/admin/integration
+            emailjs.init('user_tVbgJLKj6p1dNvN1qB6Ej');
+        })();
+    </script>
+    <script type="text/javascript">
+        window.onload = function() {
+            document.getElementById('contact-form').addEventListener('submit', function(event) {
+                event.preventDefault();
+                // generate a five digit number for the contact_number variable
+                this.contact_number.value = Math.random() * 100000 | 0;
+                // these IDs from the previous steps
+                emailjs.sendForm('service_qv0lkv1', 'template_qsn7pc6', this)
+                    .then(function() {
+                        console.log('SUCCESS!');
+                    }, function(error) {
+                        console.log('FAILED...', error);
+                    });
+            });
+        }
+    </script>
+    <title>Valanta</title>
+</head>
+<body>
+    <div class="header">
+        <div class="logo">
+            <img src="CSS/Fin_img/logo (1) 1.png" alt="">
+            <div class="language">
+                <div class="lang">
+                    <p>UA</p>
+                </div>
+                <div class="lang">
+                    <p>RU</p>
+                </div>
+            </div>
+            <div class="curs">
+                <p class="cur">USD 28.90</p>
+                <p class="cur">EUR 35.00</p>
+            </div>
+            <div class="soc">
+                <i class="fab fa-facebook-f"></i>
+                <i class="fab fa-instagram"></i>
+                <i class="fab fa-youtube"></i>
+            </div>
+            <div class="phone">
+                <p class="ph">044-537-20-07</p>
+                <p class="ph">068-537-20-07</p>
+            </div>
+            <img src="CSS/Fin_img/smartphone 1.svg" alt="">
+            <div class="calendar">
+                <div class="left">
+                    <p class="Mais">MAISTRA ONLINE</p>
+                </div>
+                <div class="right dis">
+                    <i class="far fa-calendar-check"></i>
+                </div>
+            </div>
+            <div class="calendar ser">
+                <div class="lefts">
+                    <p>ТУРЫ ONLINE</p>
+                </div>
+                <div class="rights dis">
+                    <i class="fas fa-search"></i>
+                </div>
+            </div>
+        </div>
+      </div>
+    <hr>
+    <div class="all">
+        <div class="men">
+            <ul class="menu">
+                <li class="menu-icon"><i class="fas fa-search"></i></li>
+                <li><div class="dropdown">
+                    <a class="btn btn-sm dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                      Отели
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                      <li><a class="dropdown-item" href="#">Golden Shores</a></li>
+                      <li><a class="dropdown-item" href="#">Sea Shores</a></li>
+                      <li><a class="dropdown-item" href="#">Ещё один Египетский оетль)</a></li>
+                    </ul>
+                  </div></li>
+                <li><div class="dropdown">
+                    <a class="btn btn-sm dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                      Страны
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                      <li><a class="dropdown-item" href="#">Египет</a></li>
+                      <li><a class="dropdown-item" href="#">Мальдивы</a></li>
+                      <li><a class="dropdown-item" href="#">Турция</a></li>
+                    </ul>
+                </div></li>
+                <li><div class="dropdown">
+                    <a class="btn btn-sm dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                      Авиа
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                      <li><a class="dropdown-item" href="#">UIA</a></li>
+                      <li><a class="dropdown-item" href="#">Sky Up</a></li>
+                      <li><a class="dropdown-item" href="#">Windrose</a></li>
+                    </ul>
+                </div></li>
+                <li class="menu-item"><a class="item" href="###">Каталог Туров</a></li>
+                <li><div class="dropdown">
+                    <a class="btn btn-sm dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                      Агентам
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                      <li><a class="dropdown-item" href="#">Стоимость договра</a></li>
+                      <li><a class="dropdown-item" href="#">Связь</a></li>
+                    </ul>
+                </div></li>
+                <li><div class="dropdown">
+                    <a class="btn btn-sm dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                      О нас
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                      <li><a class="dropdown-item" href="#">Сотрудничество</a></li>
+                      <li><a class="dropdown-item" href="#">Награды</a></li>
+                      <li><a class="dropdown-item" href="#">Команда</a></li>
+                    </ul>
+                </div></li>
+                <li class="menu-item"><a href="###" class="item">Блог</a></li>
+                <li class="menu-item"><a href="###" class="item">FAQ</a></li>
+                <li class="menu-item"><a href="###" class="item">Контакты</a></li>
+            </ul>
+        </div>
+        <div class="img-first">
+          <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="first-img-indicators active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" class="first-img-indicators" aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" class="first-img-indicators" aria-label="Slide 3"></button>
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" class="first-img-indicators" aria-label="Slide 4"></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="CSS/Fin_img/Mask Group.png" class="d-block w-100" alt="...">
+                <div class="first-img-caption carousel-caption d-none d-md-block">
+                  <p>От 300 € за сутки</p>
+                  <h2>НОВЫЙ ЭКО-ОТЕЛЬ MASTILA НА О.ХВАР В ХОРВАТИИ</h2>
+                  <div class="first-img-caption-a">
+                    <a href="###">Подробнее</a>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img src="CSS/Fin_img/about-us-innovation-grönhult-1440x490.jpg" class="d-block w-100" alt="...">
+                <div class="second-img-caption carousel-caption d-none d-md-block">
+                  <p>Удобная связь c иностранными арендодателями</p>
+                  <h2>БОЛЕЕ 100 КВАРТИР ДЛЯ СЪЁМА В ПОЧТИ ЛЮБОЙ ТОЧКЕ ЕВРОПЫ</h2>
+                  <div class="first-img-caption-a">
+                    <a href="">Подробнее</a>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img src="CSS/Fin_img/caf-connects---corporate-social-responsibility-1440x490.jpg" class="d-block w-100" alt="...">
+                <div class="third-img-caption carousel-caption d-none d-md-block">
+                  <p>Услуги туроператора онлайн</p>
+                   <h2>ВЫБЕРИТЕ ТУР НЕ ВЫХОДЯ ИЗ ДОМА</h2>
+                  <div class="first-img-caption-a">
+                    <a href="">Подробнее</a>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img src="CSS/Fin_img/Covid-Response-1440x490.jpg" class="d-block w-100" alt="...">
+                <div class="four-img-caption carousel-caption d-none d-md-block">
+                  <p>Точная и новейшая информация</p>
+                  <h2>УЗНАВАЙТЕ ПЕРВЫМИ НОВОСТИ О КАРАНТИННЫХ ОГРАНИЧЕНИЯХ</h2>
+                  <div class="first-img-caption-a">
+                    <a href="">Подробнее</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          </div>
+        <div class="under-img-first">
+          <div class="txt-a">
+            <h1>ваш туроператор высокого уровня обслуживания.</h1>
+            <p>Откройте мир путешествий заново.</p>
+             <div class="buttons">
+              <a class="first-a" href="###">Что мы предлагаем?</a>
+              <a class="second-a" href="###">Консультация</a>
+            </div>
+          </div>
+          <div class="u-i-f-ul">
+            <div class="img-ul">
+              <div class="first">
+                <img src="CSS/Fin_img/Group153u-f-i-ul-icon.png" alt="">
+              </div>
+              <div class="second">
+                <img src="CSS/Fin_img/Frame 23img-ul-second.png" alt="">
+              </div>
+              <div class="third">
+                <img src="CSS/Fin_img/Frame 22img-ul-third.png" alt="">
+              </div>
+            </div>
+            <div class="img-ul-txt">
+              <p>ИНДИВИДУАЛЬНЫЙ ПОДХОД</p>
+              <p>КОНСЬЕРЖ-СЕРВИС</p>
+              <p>ОТДЫХ ПРЕМИУМ-КЛАССА</p>
+            </div>
+          </div>
+        </div>
+        <div class="gallery">
+          <div class="gallery-header">
+            <h1>ЛУЧШИЕ ОТЕЛИ</h1>
+            <i class="fas previous fa-long-arrow-alt-left"></i>
+            <i class="fas next fa-long-arrow-alt-right"></i>
+            <hr>
+            <a href="###">Все отели</a>
+          </div>
+          <div class="cards">
+           <div class="card-first">
+              <div class="card-first-sm-p">
+                <p>Портонови, Черногория</p>
+              </div>
+              <img src="CSS/Fin_img/Frame 20four_stars.png" alt="">
+              <p class="card-first-big-p">ONE&ONLY PORTONOVI</p>
+            </div>
+            <div class="card-second">
+              <div class="card-first-sm-p">
+                <p>Ровінь, п-в Істра</p>
+              </div>
+              <img src="CSS/Fin_img/Frame 19.png" alt="">
+             <p class="card-second-big-p">ЗИМОВКА В REGENT PORTO MONTENEGRO</p>
+           </div>
+            <div class="card-third">
+              <div class="card-first-sm-p">
+                <p>Бока Котор, Черногории</p>
+             </div>
+              <img src="CSS/Fin_img/Frame 20four_stars.png" alt="">
+                <p class="card-third-big-p">ЛЕЧЕНИЕ В NAFTALAN С АВИЯ КИЕВ-ЗАГРЕБ-КИЕВ</p>
+            </div>
+          </div>
+        </div>
+      <div class="cards-second">
+        <div class="c-s-txt">
+          <h2>АКТУАЛЬНЫЕ ТУРЫ</h2>
+          <hr>
+          <a href="" class="c-s-txt-a">Все туры</a>
+        </div>
+        <div class="cards-icons">
+          <i class="fas previous fa-long-arrow-alt-left"></i>
+          <div class="cards-second-act">
+            <div class="cards-s-act-f">
+              <div class="c-s-a-f-img">
+                <div class="c-s-act-txt-on-img">
+                  <p>Портонови, Черногория</p>
+                </div>
+              </div>
+              <div class="c-s-act-f-txt">
+                <p class="first">ONE&ONLY PORTONOVI</p>
+                <p class="second">ПЕРВЫЙ УЛЬТРАРОСКОШНЫЙ КУРОРТ ONE&ONLY В ЕВРОПЕ</p>
+                <hr>
+                <div class="cards-second-foot-txt">
+                  <div class="c-s-f-t-left">
+                    <div class="dif-size">
+                      <p class="c-s-f-t-l-first-p">от</p>
+                      <p class="c-s-f-t-l-second-p">818 €</p>
+                    </div>
+                      <p class="c-s-f-t-l-third-p">за номер в сутки в сезон</p>       
+                    </div>             
+                  <div class="c-s-f-t-right">
+                   <p>от 3 ночей</p>
+                   <p>с 01 мая 2021</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="cards-s-act-s">
+              <div class="c-s-a-s-img">
+                <div class="c-s-act-txt-on-img-s">
+                  <p>Ровінь, п-в Істра</p>
+                </div>
+              </div>
+              <div class="c-s-act-s-txt">
+                <p class="first">ЗИМОВКА В REGENT PORTO MONTENEGRO</p>
+                <p class="second">це втілення високого стилю, в якому поєднується зручність...</p>
+                <hr>
+                <div class="cards-second-foot-txt">
+                  <div class="c-s-s-t-left">
+                    <div class="dif-size">
+                      <p class="c-s-f-t-l-first-p">от</p>
+                      <p class="c-s-f-t-l-second-p">938 €</p>
+                    </div>
+                    <p class="c-s-f-t-l-third-p">з особи</p>
+                  </div>
+                  <div class="c-s-f-t-right c-s-s-t-right">
+                   <p>от 3 ночей</p>
+                   <p>с 01 мая 2021</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="cards-s-act-t">
+              <div class="c-s-a-t-img">
+                <div class="c-s-act-txt-on-img">
+                  <p>Бока Котор, Черногория</p>
+                </div>
+              </div>
+              <div class="c-s-act-t-txt">
+                <p class="first">ЛЕЧЕНИЕ В NAFTALAN С АВИА КИЕВ-ЗАГРЕБ-КИЕВ</p>
+                <p class="second">первый бренд, воплотивший оригинальную концепцию пляжных...</p>
+                <hr>
+                <div class="cards-second-foot-txt c-s-f-t-t">
+                  <div class="c-s-t-t-left">
+                    <div class="dif-size">
+                      <p class="c-s-f-t-l-first-p">от</p>
+                      <p class="c-s-f-t-l-second-p">175 €</p>
+                    </div>
+                      <p class="c-s-f-t-l-third-p">за номер в сутки</p>       
+                    </div>             
+                  <div class="c-s-f-t-right c-s-t-t-right">
+                   <p>от 3 ночей</p>
+                   <p>с 01 мая 2021</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <i class="fas next fa-long-arrow-alt-right"></i>
+        </div>
+      </div>
+      <div class="Form">
+        <div class="txt-Form">
+            <div class="txt-form-left">
+            <h2>получить консультацию специалиста</h2>
+            <p class="txt-p-first">Оставьте данные прямо сейчас, и мы свяжемся с вами в ближайшее время.</p>
+            </div>
+            <div class="txt">
+                <p class="txt-p-second">Срок действия эксклюзивных предложений ограничен, поэтому узнавайте подробности заранее:</p>
+               <img class="txt-img" src="CSS/Fin_img/!On-txt-img.png" alt="">
+            </div>
+        </div>
+        <form class="first-form" action="" id="contact-form">
+            <input type="hidden" name="contact_number">
+            <input class="txt-form-input" type="text" placeholder="Имя" name="from_name">
+            <input class="txt-form-input" type="email" placeholder="E-mail" name="user_email">
+            <input class="txt-form-input" type="tel" placeholder="Телефон" name="phone">
+            <button class="txt-form-button" type="submit">Отправить</button>
+        </form>
+    </div>
+    </div>
+    </div>
+  <div class="footer">
+    <div class="footer_p">
+      <h2>ПУТЕШЕСТВУЙ С Valanta Travel Company!</h2>
+      <p>ПОДПИСЫВАЙТЕСЬ НА НАШУ РАССЫЛКУ, ЧТОБЫ ПОЛУЧАТЬ САМЫЕ ГОРЯЧИЕ ПРЕДЛОЖЕНИЯ</p>
+    </div>
+    <div class="footer_form">
+      <form action="">
+        <input type="email" name="" id="" placeholder="Email" class="email">
+        <label for="checkbox" class="checkbox">
+        <input type="checkbox" class="checkbox-first"></input>
+        </label>
+        <p>Я турист</p>
+        <label for="checkbox" class="checkbox">
+        <input type="checkbox" class="checkbox-second"></input>
+        </label>
+        <p>Я турагент</p>
+        <button type="submit">Отправить</button>
+      </form> 
+    </div>
+    <div class="footer_txt">
+      <div class="footer_txt-head">
+        <img src="CSS/Fin_img/logo (1) 2logo_footer.png" alt="">
+        <ul class="ul-first">
+          <li>
+            <a href="">Отели</a>
+          </li>
+          <li>
+            <a href="">Страны</a>
+          </li>
+          <li>
+            <a href="">Maistra Online</a>
+          </li>
+          <li>
+            <a href="">Туры Online</a>
+          </li>
+          </ul>
+        <ul class="ul-second">
+          <li>
+            <a href="">Агентам</a>
+          </li>
+          <li>
+            <a href="">О нас</a>
+          </li>
+          <li>
+            <a href="">Блог</a>
+          </li>
+        </ul>
+        <div class="footer-txt-head-f">
+          <P class="footer-t-h-f-f-p">РЕЖИМ РАБОТЫ</P>
+          <P class="footer-t-h-f-s-p">Пн-Пт 10:00-19:00</P>
+        </div>
+        <div class="footer-txt-head-s">
+          <p class="footer-t-h-s-f-p">+38 (000) 000-00-00</p>
+          <p class="footer-t-h-s-f-p">+38 (000) 000-00-00</p>
+          <p class="footer-t-h-s-s-p">ВСЕ КОНТАКТЫ</p>
+        </div>
+      </div>
+      <hr>
+      <div class="footer_txt-foot">
+        <p>2002-2021 Туроператор Valanta Travel Company</p>
+        <div class="footer-txt-foot-icon">
+          <a href="">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+          <a href="">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="">
+            <i class="fab fa-youtube"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+</html>
